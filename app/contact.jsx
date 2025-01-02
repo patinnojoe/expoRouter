@@ -1,5 +1,5 @@
 import { Colors } from '@/constants/Colors';
-import { View, Text, StyleSheet, Image, Appearance } from 'react-native';
+import { View, Text, StyleSheet, Image, Appearance, ScrollView } from 'react-native';
 
 const Contact = () => {
   const colorScheme = Appearance.getColorScheme();
@@ -7,7 +7,7 @@ const Contact = () => {
 
   const styles = createStyles(theme, colorScheme);
   return (
-    <View style={styles.parentCOntainer}>
+    <ScrollView style={styles.parentCOntainer} showsHorizontalScrollIndicator={false}>
       <Image
         style={styles.image}
         source={{
@@ -20,7 +20,7 @@ const Contact = () => {
         <Text style={[styles.textStyles, styles.phone, styles.contactText]}>+234567890</Text>
         <Text style={[styles.textStyles, styles.phone, styles.contactText]}>newresturant@gmail.com</Text>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
